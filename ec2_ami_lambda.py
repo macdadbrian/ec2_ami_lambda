@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     ec2_resource = boto3.resource('ec2','eu-west-1')
 
     result = ec2_client.describe_instances(
-            Filters = [ {'Name': 'tag:celltrak_ec2_ami', 'Values': ['true']}
+            Filters = [ {'Name': 'tag:ec2_ami', 'Values': ['true']}
              ]
         )
 
